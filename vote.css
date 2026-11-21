@@ -1,0 +1,299 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fb;
+    color: #263445;
+}
+
+/* NAVIGATION */
+header {
+    background: white;
+    padding: 20px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px #0001;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #1256a0;
+    font-size: 28px;
+}
+
+.logo span {
+    color: #13a5d0;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #1684d8;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 27px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    min-height: 450px;
+    background: linear-gradient(120deg, #063b78, #168ac5);
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ffdc58;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffdc58;
+    color: #123;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 35px 10px;
+    background: white;
+    text-align: center;
+}
+
+.stats h2 {
+    color: #1673c5;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #1256a0;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #777;
+}
+
+/* CANDIDATES */
+.candidate-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.candidate-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px #0000000c;
+}
+
+.candidate-avatar {
+    font-size: 65px;
+    background: #e4f2ff;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.candidate-card h3 {
+    color: #1256a0;
+    margin-bottom: 12px;
+}
+
+.candidate-card p {
+    margin-bottom: 10px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* VOTING */
+.voting-section {
+    background: #e8f3ff;
+}
+
+.voting-box {
+    max-width: 550px;
+    background: white;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.vote-option {
+    display: block;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.vote-option input {
+    margin-right: 12px;
+    accent-color: #1673c5;
+}
+
+.voting-box button {
+    width: 100%;
+}
+
+#voteMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* RESULTS */
+.result-item {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.result-item h3 {
+    margin-bottom: 10px;
+}
+
+.progress {
+    width: 100%;
+    background: #ddd;
+    height: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #1673c5;
+    transition: width .5s;
+}
+
+.result-item p {
+    margin-top: 7px;
+    color: #666;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    line-height: 1.9;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+    background: #102f50;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    line-height: 2;
+}
+
+footer h2 {
+    color: #ffdc58;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .candidate-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}

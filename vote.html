@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteNow - Online Voting System</title>
+    <link rel="stylesheet" href="vote.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2 class="logo">Vote<span>Now</span></h2>
+
+        <ul id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#candidates">Candidates</a></li>
+            <li><a href="#vote">Vote</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Your Vote, <span>Your Voice</span></h1>
+        <p>
+            Participate in the election, explore candidates
+            and make your choice count.
+        </p>
+        <a href="#vote" class="btn">Vote Now</a>
+    </div>
+</section>
+
+<!-- ELECTION INFO -->
+<section class="stats">
+    <div>
+        <h2 id="totalVotes">0</h2>
+        <p>Total Votes</p>
+    </div>
+
+    <div>
+        <h2>3</h2>
+        <p>Candidates</p>
+    </div>
+
+    <div>
+        <h2>1</h2>
+        <p>Active Election</p>
+    </div>
+</section>
+
+<!-- CANDIDATES -->
+<section class="section" id="candidates">
+    <div class="section-title">
+        <h2>Meet the Candidates</h2>
+        <p>Learn about the candidates before making your choice.</p>
+    </div>
+
+    <div class="candidate-container">
+
+        <div class="candidate-card">
+            <div class="candidate-avatar">👨</div>
+            <h3>Alex Johnson</h3>
+            <p>Candidate A</p>
+            <p>Focus: Education and development.</p>
+        </div>
+
+        <div class="candidate-card">
+            <div class="candidate-avatar">👩</div>
+            <h3>Mary Smith</h3>
+            <p>Candidate B</p>
+            <p>Focus: Healthcare and community.</p>
+        </div>
+
+        <div class="candidate-card">
+            <div class="candidate-avatar">👨</div>
+            <h3>David Brown</h3>
+            <p>Candidate C</p>
+            <p>Focus: Technology and innovation.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- VOTING -->
+<section class="section voting-section" id="vote">
+    <div class="section-title">
+        <h2>Cast Your Vote</h2>
+        <p>Select one candidate for this demonstration election.</p>
+    </div>
+
+    <div class="voting-box">
+        <form id="votingForm">
+
+            <label class="vote-option">
+                <input type="radio" name="candidate"
+                       value="Alex Johnson" required>
+                Alex Johnson
+            </label>
+
+            <label class="vote-option">
+                <input type="radio" name="candidate"
+                       value="Mary Smith">
+                Mary Smith
+            </label>
+
+            <label class="vote-option">
+                <input type="radio" name="candidate"
+                       value="David Brown">
+                David Brown
+            </label>
+
+            <button type="submit" class="btn">
+                Submit Vote
+            </button>
+        </form>
+
+        <p id="voteMessage"></p>
+    </div>
+</section>
+
+<!-- RESULTS -->
+<section class="section" id="results">
+    <div class="section-title">
+        <h2>Election Results</h2>
+        <p>View the current demonstration voting statistics.</p>
+    </div>
+
+    <div id="resultsContainer"></div>
+
+    <button class="btn" onclick="displayResults()">
+        Refresh Results
+    </button>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+    <div class="section-title">
+        <h2>About VoteNow</h2>
+    </div>
+
+    <p>
+        VoteNow is a demonstration online voting platform
+        designed to show how digital voting interfaces work.
+        It allows users to explore candidates, cast a sample
+        vote and view the results.
+    </p>
+</section>
+
+<footer>
+    <h2>VoteNow</h2>
+    <p>Your Vote, Your Voice.</p>
+    <p>© 2026 VoteNow. All Rights Reserved.</p>
+    <p>Educational demonstration only – not an official election system.</p>
+</footer>
+
+<script src="vote.js"></script>
+
+</body>
+</html>
